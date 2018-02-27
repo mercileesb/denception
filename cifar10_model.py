@@ -80,7 +80,7 @@ class ResNetCifar10(model_base.ResNet):
     return x
 
 
-class InceptionCifar10(model_base.ResNet):
+class InceptionCifar10(model_base.Inception):
   """Cifar10 model with ResNetV1 and basic residual block."""
 
   def __init__(self,
@@ -89,7 +89,7 @@ class InceptionCifar10(model_base.ResNet):
                batch_norm_decay,
                batch_norm_epsilon,
                data_format='channels_first'):
-    super(ResNetCifar10, self).__init__(
+    super(InceptionCifar10, self).__init__(
         is_training,
         data_format,
         batch_norm_decay,
